@@ -1,0 +1,32 @@
+\section{Example Results}
+
+Tables use \texttt{booktabs} by default. The class also defines light highlight helpers: \verb|\hlblue|, \verb|\hlorange|, and \verb|\hlred|.
+
+\begin{table}[t]
+\centering
+\caption{Example benchmark table. Replace the synthetic numbers with real results. Highlighting is intentionally subtle so that the table remains printable.}
+\label{tab:results}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Hard & Medium & Easy & Avg. score \\
+\midrule
+Baseline A      & \hlred{22.1} & 45.3 & 71.0 & 46.1 \\
+Baseline B      & 31.5 & 52.4 & 78.8 & 54.2 \\
+NUSPaper Demo   & \hlblue{44.2} & \hlblue{66.1} & \hlblue{84.0} & \hlorange{64.8} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Cref{tab:results} shows how a compact benchmark table looks in the template. Figure captions and table captions are ragged-right, small, and label-bold, which keeps long captions readable in single-column reports.
+
+\subsection{Code snippets}
+
+The bundled listing style is suitable for pseudocode, commands, and short implementation excerpts.
+
+\begin{lstlisting}[language=Python,caption={Example analysis snippet.}]
+def normalize_scores(scores):
+    lo, hi = min(scores), max(scores)
+    if hi == lo:
+        return [0.0 for _ in scores]
+    return [(x - lo) / (hi - lo) for x in scores]
+\end{lstlisting}

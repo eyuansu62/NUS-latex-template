@@ -1,0 +1,49 @@
+\section{Template Structure}
+
+The class exposes a small set of metadata commands in addition to the standard \LaTeX{} \verb|\title|, \verb|\author|, and \verb|\date| commands.
+
+\begin{lstlisting}[language=TeX,caption={Minimal metadata block.}]
+\documentclass{nuspaper}
+\title{Your Paper Title}
+\shorttitle{Running Header Title}
+\date{2026-06-15}
+\arxivstamp{arXiv:XXXX.XXXXX [cs.LG] 15 Jun 2026}
+\author[1,*]{First Author}
+\affil[1]{National University of Singapore}
+\paperlinks{\FrontLink{Project Page}{Project Website}{https://example.com}}
+\titlefootnote{* Equal contribution.}
+\end{lstlisting}
+
+\subsection{Recommended repository layout}
+
+Keep the manuscript modular but not over-engineered. A practical structure is:
+
+\begin{lstlisting}[language=bash,caption={Suggested file layout.}]
+nuspaper-template/
+|-- main.tex
+|-- nuspaper.cls
+|-- refs.bib
+|-- sections/
+|   |-- 01_introduction.tex
+|   |-- 02_method.tex
+|   `-- 03_experiments.tex
+|-- figures/
+|-- tables/
+`-- latexmkrc
+\end{lstlisting}
+
+\subsection{Mathematical environments}
+
+Standard theorem-like environments are included. For example:
+
+\begin{definition}[House-style invariant]
+A paper template is \emph{venue-compatible} if its scientific content can be moved to an official submission template without rewriting the mathematical notation, citations, labels, figures, or tables.
+\end{definition}
+
+\begin{proposition}
+A small class file plus standard manuscript body files is easier to maintain than a large, paper-specific preamble copied across projects.
+\end{proposition}
+
+\begin{proof}
+The class file centralizes typography and layout decisions. The manuscript body stays mostly semantic, so later migration to a venue template only requires replacing the class and adapting a small number of metadata commands.
+\end{proof}

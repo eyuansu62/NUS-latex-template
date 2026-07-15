@@ -1,0 +1,55 @@
+\documentclass{nuspaper}
+
+% Optional front-page overrides.
+% The front page uses NUSGold for the title by default.
+% Use \documentclass[yellowtitle]{nuspaper} for the brighter NUSYellow.
+% To make it closer to the reference paper's crimson title, use for example:
+% \definecolor{ReferenceCrimson}{HTML}{E01843}
+% \colorlet{NUSFrontTitle}{ReferenceCrimson}
+
+\title{NUSPaper: A Clean House Style for Research Preprints}
+\shorttitle{NUSPaper: A Clean House Style for Research Preprints}
+\date{2026-06-15}
+\venue{Technical Report}
+\version{Template preview v0.1}
+\arxivstamp{arXiv:XXXX.XXXXXv1 [cs.LG] 15 Jun 2026}
+
+\author[1,*]{First Author}
+\author[1,*]{Second Author}
+\author[2]{Third Author}
+\author[1,\dag]{Senior Author}
+\affil[1]{National University of Singapore}
+\affil[2]{Partner Institution}
+
+\paperlinks{%
+  \ProjectLink{NUSPaper Project Website}{https://example.com/project}
+  \DemoLink{Template Preview}{https://example.com/demo}
+  \ArtifactLink{Supplementary Materials}{https://example.com/data}
+  \SourceLink{GitHub Repository}{https://github.com/example/repo}
+}
+
+\correspondence{senior.author@example.edu}
+\titlefootnote{* Equal contribution. \dag\ Corresponding author. This is an unofficial NUS-flavoured preprint style; use of the NUS logo should follow the university identity guidelines.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This template provides a compact, lab-style LaTeX starting point for arXiv preprints, benchmark reports, and internal technical notes. It uses a clean first-page masthead, a centered high-contrast title block, compact author affiliations, a readable highlighted abstract, metadata links, an arXiv-style side stamp, and a bottom correspondence note. \textbf{The goal is to preserve the readability of a research paper while giving the document a recognizable house style before it is adapted to a venue-specific format.} The body pages remain conventional: single-column text, running headers, clean captions, theorem environments, code listings, and booktabs tables.
+\end{abstract}
+
+\keywords{LaTeX template; preprint; technical report; NUS; research communication}
+
+\input{sections/01_introduction}
+\input{sections/02_method}
+\input{sections/03_experiments}
+\input{sections/04_conclusion}
+
+\bibliographystyle{plainnat}
+\nocite{knuth1984texbook,example2026template}
+\bibliography{refs}
+
+\appendix
+\input{sections/a_appendix}
+
+\end{document}

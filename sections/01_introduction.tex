@@ -1,0 +1,18 @@
+\section{Introduction}
+
+Research groups often need a paper format that is more polished than the default \texttt{article} class, but less restrictive than an official conference template. The common use case is a preprint, benchmark report, model card, dataset paper, or technical note that needs to look intentional on arXiv before it is adapted to a venue-specific format.
+
+\begin{takeawaybox}
+Use this template for public preprints and lab reports. For a formal conference submission, switch back to the venue-provided class and keep only the shared macros, figures, tables, and bibliography.
+\end{takeawaybox}
+
+The design philosophy is deliberately simple: a strong first page, readable body typography, restrained colour, and minimal custom syntax. The first page is meant to communicate the paper's identity, abstract, release links, and correspondence metadata at a glance, while subsequent pages behave like a conventional academic manuscript.
+
+\paragraph{Design goals.}
+The template optimizes for four properties:
+\begin{enumerate}
+  \item \textbf{Readable single-column layout}: better for arXiv, technical reports, and early drafts.
+  \item \textbf{High-signal title page}: title, authors, affiliations, abstract, links, keywords, and footnotes are visible immediately.
+  \item \textbf{Submission-safe structure}: content remains standard LaTeX and can be migrated to NeurIPS, ICLR, ICML, ACL, CVPR, or ACM classes.
+  \item \textbf{Small style surface}: most visual changes live in \texttt{nuspaper.cls}, not in the manuscript body.
+\end{enumerate}
