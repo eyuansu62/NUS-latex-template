@@ -215,7 +215,7 @@
 \setlength{\NUSCoverAfterAuthorSkip}{1.65em}
 \setlength{\NUSCoverMetaSkip}{0.55em}
 \setlength{\NUSMastheadRuleHeight}{0.55pt}
-\setlength{\NUSMastheadAfterSkip}{1.05em}
+\setlength{\NUSMastheadAfterSkip}{0.95em}
 \setlength{\NUSStampX}{15pt}
 \setlength{\NUSStampY}{250pt}
 
@@ -234,7 +234,7 @@
 \newcommand{\NUSCoverTitleFont}{\fontsize{24.5}{29.5}\selectfont\bfseries}
 \newcommand{\NUSStampFont}{\fontsize{18}{20}\selectfont}
 \newlength{\NUSBrandLogoWidth}
-\setlength{\NUSBrandLogoWidth}{16mm}
+\setlength{\NUSBrandLogoWidth}{20mm}
 \newcommand{\NUSDefaultBrandMark}{%
   \IfFileExists{assets/NUS_logo_full-horizontal-tight.png}{%
     \includegraphics[width=\NUSBrandLogoWidth]{assets/NUS_logo_full-horizontal-tight.png}%
@@ -329,10 +329,10 @@
     \hbox to \linewidth{%
       \vbox{\hbox{\nus@brandmark}}%
       \hfil
-      \vbox{\hbox{\raisebox{1.0ex}{\footnotesize\color{NUSMuted}\strut\@date}}}%
+      \vbox{\hbox{\raisebox{1.6ex}{\footnotesize\color{NUSMuted}\strut\@date}}}%
     }\par
     \nointerlineskip
-    \vspace{0.4ex}%
+    \vspace{4mm}%
     {\color{NUSMastheadRule}\hrule height \NUSMastheadRuleHeight width \linewidth}%
     \vspace{\NUSMastheadAfterSkip}%
   \fi
@@ -534,17 +534,21 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \newtcolorbox{takeawaybox}{
-  colback=NUSPaleBlue,
-  colframe=NUSBlue!55!black,
-  boxrule=0.5pt,
-  arc=2pt,
-  left=0.9em,
-  right=0.9em,
-  top=0.65em,
-  bottom=0.65em,
-  title=Takeaway,
-  fonttitle=\bfseries,
-  coltitle=white
+  colback=NUSAbstractBg,
+  colframe=NUSBlue,
+  boxrule=0pt,
+  leftrule=2.4pt,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  arc=0pt,
+  left=1.05em,
+  right=1.0em,
+  top=0.7em,
+  bottom=0.75em,
+  before upper={%
+    \noindent\textcolor{NUSBlue}{\small\bfseries\MakeUppercase{Takeaway}}\par\vspace{0.35em}%
+  }
 }
 
 % -----------------------------------------------------------------------------
